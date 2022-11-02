@@ -28,7 +28,7 @@ const Article = ({ article }: Props) => (
             <p className={styles.title}>Score: {article?.score}</p>
             <h2 className={styles.title}>{article?.title}</h2>
             <div className={styles.date}>{timestampToDate(article?.time)}</div>
-            <div dangerouslySetInnerHTML={{ __html: article?.text}} className={styles.content}></div>
+            <div dangerouslySetInnerHTML={{ __html: article?.text ?? ""}} className={styles.content}></div>
             <ArticleUser id={article?.by} />
             <div className={styles.actions}>
                 <a className={styles['primary-btn']} href={article?.url ?? ''} target="_blank" rel="noreferrer">Read More</a>
