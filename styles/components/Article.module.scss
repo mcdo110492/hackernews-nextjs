@@ -1,0 +1,96 @@
+@import "../variables";
+@import "../mixins";
+
+.article {
+    border: 1px solid #E1E2E2;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 404px;
+    min-height: 720px;
+    position: relative;
+   
+
+    .img-block {
+        position: relative;
+        height: 214px;
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .body {
+        padding: 40px;
+
+        .title {
+            color: $color-primary;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 35px;
+            max-width: 332px;
+        }
+
+        .date {
+            color: $text-color;
+            font-size: 14px;
+        }
+
+        .content {
+            color: $text-color;
+            font-size: 14px;
+            line-height: 30px;
+            margin-top: 15px;
+        }
+
+        .avatar-container {
+            position: relative;
+            margin-top: 15px;
+            display: flex;
+            flex-direction: row;
+
+            .avatar {
+                vertical-align: middle;
+                border-radius: 50%;
+            }
+
+
+            .user-list {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+               
+            }
+
+
+            .user {
+                color: $text-color;
+                font-size: 14px;
+                margin-left: 8px;
+
+                .name {
+
+                }
+
+                .karma {
+
+                }
+
+            }
+        }
+    }
+
+    .actions {
+        position: absolute;
+        margin-top: 44px;
+        bottom: 41px;
+
+        .primary-btn {
+            background-color: $color-primary;
+            border-radius: 2px;
+            color: #FFFFFF;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 44px;
+        }
+    }
+}
